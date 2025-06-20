@@ -1,0 +1,20 @@
+{
+  "name": "langchain-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/core": "^0.3.60",
+    "@langchain/google-genai": "^0.2.13",
+    "@langchain/langgraph": "^0.3.4",
+    "dotenv": "^16.5.0",
+    "os": "^0.1.2",
+    "zod": "^3.25.67"
+  }
+}
