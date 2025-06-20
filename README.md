@@ -1,43 +1,26 @@
 # langgraph-node-js
 This repo shows the integration of langgraph with langsmith for debugging along with Google Gemini LLM
 
-LangGraph Node.js
-A robust Node.js implementation of LangGraph, designed for building stateful, multi-agent applications and complex LLM workflows. This project provides a foundational structure for orchestrating AI agents, managing conversational state, and creating dynamic, decision-making pipelines entirely within the Node.js ecosystem.
+langgraph-node-js
+This repository demonstrates the integration of LangGraph with LangSmith for debugging, leveraging the Google Gemini LLM within a Node.js environment. It provides a foundational structure for orchestrating AI agents, managing conversational state, and creating dynamic, decision-making pipelines.
 
-Table of Contents
-Features
+🌟 Features
+Stateful Agent Orchestration: Build and manage complex conversational flows with stateful agents using LangGraph.
 
-Getting Started
+Node.js Integration: Seamlessly integrate powerful AI orchestration capabilities into your Node.js applications.
 
-Prerequisites
+LangSmith Debugging: Utilize LangSmith for comprehensive tracing, monitoring, and debugging of your LangGraph applications, offering deep insights into agent interactions.
 
-Installation
+Google Gemini LLM: Leverage the advanced capabilities of Google Gemini for natural language understanding and generation within your AI agents.
 
-Configuration
+Modular Design: A well-structured project that allows for easy extension and customization of agents, tools, and graphs.
 
-Usage
+Dynamic Decision-Making: Create pipelines where agents can dynamically decide on the next action based on the current state and LLM outputs.
 
-Project Structure
+Extensibility: Designed to be easily extended with new agents, tools, and LLMs.
 
-Contributing
-
-License
-
-Acknowledgements
-
-Features
-Stateful Agent Orchestration: Leverage LangGraph's capabilities to manage complex conversational flows and agent interactions with persistent state.
-
-Node.js Integration: Build high-performance, scalable LLM applications using familiar JavaScript/TypeScript syntax and the extensive Node.js ecosystem.
-
-Modular Design: Organized project structure promoting reusability and maintainability of agents, tools, and graph definitions.
-
-Dynamic Decision Making: Implement conditional routing and advanced logic within your LLM workflows.
-
-Extensible: Easily integrate with various LLM providers (e.g., OpenAI, Anthropic, Google Gemini) and custom tools.
-
-Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+🚀 Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 Prerequisites
 Node.js (v18 or higher recommended)
@@ -56,85 +39,36 @@ npm install
 # or
 yarn install
 
-Configuration
-This project likely relies on API keys for LLM providers. Create a .env file in the root directory of the project and add your API keys:
+Environment Variables:
 
-# Example for OpenAI
-OPENAI_API_KEY=your_openai_api_key_here
+Create a .env file in the root directory and add your API keys:
 
-# Example for other providers (if used)
-# GOOGLE_API_KEY=your_google_gemini_api_key_here
-# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+GOOGLE_API_KEY=your_google_gemini_api_key
+LANGCHAIN_API_KEY=your_langsmith_api_key
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_PROJECT=your_langsmith_project_name
 
-# Any other specific configuration variables for your application
-# e.g., DATABASE_URL=...
+Google API Key: Obtain this from the Google Cloud Console or Google AI Studio.
 
-Note: Ensure you replace your_openai_api_key_here and other placeholders with your actual API keys. Do not commit your .env file to version control.
+LangSmith API Key: Obtain this from your LangSmith dashboard.
 
 Usage
-To start the application, run the following command:
+Run the application:
 
-npm start
-# or
-node src/index.js
-# or (if using a build step)
-npm run build && npm start
+node index.js
 
-Once the application is running, you can interact with it based on its specific implementation (e.g., via an API endpoint, a command-line interface, or a web UI). Refer to the src/index.js or example files for specific entry points and interaction methods.
+(Replace index.js with your main application file if it's different).
 
-Project Structure
-A typical langgraph-node-js project might have the following structure:
+Monitor with LangSmith:
+Once the application is running, you can visit your LangSmith dashboard to see the traces and debugging information for your LangGraph runs.
 
-langgraph-node-js/
-├── src/
-│   ├── agents/            # Defines individual LLM agents and their capabilities
-│   │   ├── assistantAgent.js
-│   │   └── userProxyAgent.js
-│   ├── tools/             # Contains custom tools that agents can use (e.g., search, API calls)
-│   │   ├── searchTool.js
-│   │   └── calculatorTool.js
-│   ├── graphs/            # Defines the LangGraph state and graph structure
-│   │   ├── conversationalGraph.js
-│   │   └── researchGraph.js
-│   ├── config/            # Configuration files (e.g., LLM model settings)
-│   ├── utils/             # Helper functions
-│   └── index.js           # Main application entry point, initializes the graph
-├── .env.example           # Example environment variables file
-├── .gitignore             # Git ignore file
-├── package.json           # Node.js project dependencies and scripts
-├── README.md              # This file
+📦 Download
+You can download a ZIP archive of this project directly from GitHub:
 
-src/agents/: Modules defining the behavior and roles of different agents within your LangGraph application.
+Download langgraph-node-js.zip
 
-src/tools/: Reusable functions or classes that agents can invoke to perform specific actions (e.g., fetching data, calculations).
+🤝 Contributing
+Contributions are welcome! Please feel free to open issues or submit pull requests.
 
-src/graphs/: The core of your LangGraph definition, including state schemas, nodes, edges, and compilation logic.
-
-src/index.js: The main file where the LangGraph is instantiated and run, possibly exposing an API or CLI.
-
-Contributing
-Contributions are welcome! If you'd like to contribute, please follow these steps:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/your-feature-name).
-
-Make your changes.
-
-Commit your changes (git commit -m 'feat: Add new feature').
-
-Push to the branch (git push origin feature/your-feature-name).
-
-Open a Pull Request.
-
-Please ensure your code adheres to the existing coding style and includes appropriate tests.
-
-License
+📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-Acknowledgements
-LangGraph for providing an excellent framework for building robust LLM applications.
-
-LangChain.js for foundational LLM integrations.
-
-The open-source community for countless valuable resources.
